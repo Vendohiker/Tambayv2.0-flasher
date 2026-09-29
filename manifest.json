@@ -1,0 +1,11 @@
+{
+  "name": "Tambayan V2.0",
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        { "path": "tambayanv3.bin", "offset": 0 }
+      ]
+    }
+  ]
+}
