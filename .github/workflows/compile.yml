@@ -1,0 +1,18 @@
+name: Compile Tambay 2.0
+on: [push]
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: arduino/compile-sketches@v1
+        with:
+          fqbn: esp32:esp32:esp32
+          sketch-paths:.
+          libraries: |
+            - name: LiquidCrystal I2C
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Tambay-2.0-BIN
+          path: |
+            **/*.bin
