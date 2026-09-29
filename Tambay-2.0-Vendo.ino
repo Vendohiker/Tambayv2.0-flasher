@@ -84,7 +84,12 @@ int sel=0,manualSel=0; bool rinseQueued=false;
 
 int queuedRinseMin=0,queuedRinseCycle=0,currentRinseMin=3,currentRinseCycle=2;
 
-
+void IRAM_ATTR coinISR() {
+  coinCount++;
+}
+bool btnUp() {
+  return digitalRead(PIN_BTN_UP) == LOW;
+}
 bool btnDown(){return digitalRead(PIN_BTN_DOWN)==LOW;}
 
 bool btnSelect(){return digitalRead(PIN_BTN_SELECT)==LOW;}
