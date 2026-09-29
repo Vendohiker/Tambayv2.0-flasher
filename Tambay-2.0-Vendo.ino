@@ -1,43 +1,4 @@
-#include <Arduino.h>
-#include <WiFi.h>
-#include <WebServer.h>
-
-#define PIN_COIN 34
-#define PIN_BTN_UP 32
-#define PIN_BTN_DOWN 33
-#define PIN_BTN_OK 25
-#define PIN_BUZZER 26
-
-WebServer server(80);
-volatile int coinCount = 0;
-int credit = 0;
-
-void IRAM_ATTR coinISR() {
-  coinCount++;
-}
-
-bool btnUp() {
-  return digitalRead(PIN_BTN_UP) == LOW;
-}
-
-bool btnDown() {
-  return digitalRead(PIN_BTN_DOWN) == LOW;
-}
-
-bool btnSelect() {
-  return digitalRead(PIN_BTN_OK) == LOW;
-}
-
-bool btnDownLong() {
-  if (digitalRead(PIN_BTN_DOWN) == LOW) {
-    delay(600);
-    return digitalRead(PIN_BTN_DOWN) == LOW;
-  }
-  return false;
-}
-
-void buzz(int ms) {
-  digitalWrite(PIN_BUZZER, HIGH);
+BUZZER, HIGH);
   delay(ms);
   digitalWrite(PIN_BUZZER, LOW);
 }
@@ -63,8 +24,3 @@ void loop() {
   if (coinCount > 0) {
     noInterrupts();
     coinCount = 0;
-    interrupts();
-    credit++;
-    buzz(100);
-  }
-}
