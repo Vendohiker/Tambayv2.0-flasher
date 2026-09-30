@@ -24,3 +24,8 @@ void loop() {
   if (coinCount > 0) {
     noInterrupts();
     coinCount = 0;
+    interrupts();
+    credit++;
+    buzz(100);
+  }
+}
