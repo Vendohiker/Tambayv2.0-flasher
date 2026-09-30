@@ -1,9 +1,7 @@
 #include <Arduino.h>
 #include <WiFi.h>
 #include <WebServer.h>
-#define PIN_COIN 34
-#define PIN_BTN_UP 32
-#define PIN_BTN_DOWN 33
+#define PIN_COIN 34#define PIN_BTN_U#define PIN_BTN_DOWN 33
 #define PIN_BTN_OK 25
 #define PIN_BUZZER 26
 WebServer server(80);
