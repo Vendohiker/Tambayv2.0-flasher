@@ -1,10 +1,10 @@
 {
-  "name": "Tambayan V2.0",
+  "name": "Tambay V2.0",
   "builds": [
     {
       "chipFamily": "ESP32",
       "parts": [
-        { "path": "tambayanv3.bin", "offset": 0 }
+        { "path": "tambayv3.bin", "offset": 0 }
       ]
     }
   ]
