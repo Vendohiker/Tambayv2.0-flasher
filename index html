@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tambay 2.0 - ESP Flasher</title>
+<script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui;background:#f6f6f6;color:#222;display:flex;justify-content:center;padding:20px}
+.container{max-width:700px;width:100%;background:#fff;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,.1);padding:28px}
+h1{margin:0 0 8px}
+.sub{color:#666;margin-bottom:20px}
+.card{border:1px solid #e5e5e5;border-radius:12px;padding:16px;margin:16px 0}
+esp-web-install-button{--esp-tools-button-color:#03a9f4;--esp-tools-button-text-color:#fff}
+.badge{display:inline-block;background:#e8f5e9;color:#2e7d32;padding:4px 10px;border-radius:20px;font-size:12px;font-weight:600}
+</style>
+</head>
+<body>
+<div class="container">
+<span class="badge">● ONLINE</span>
+<h1>Tambay 2.0 Vendo Flasher</h1>
+<div class="sub">I-flash ang ESP32 mo directly sa browser</div>
+<div class="card">
+<h3>Flash Firmware</h3>
+<esp-web-install-button manifest="manifest.json">
+<button slot="activate">INSTALL TAMBAY 2.0</button>
+</esp-web-install-button>
+</div>
+</div>
+</body>
+</html>
