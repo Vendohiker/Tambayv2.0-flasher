@@ -1,4 +1,4 @@
-name: build
+: build
 on: [push]
 jobs:
   build:
@@ -9,7 +9,7 @@ jobs:
       - run: arduino-cli core update-index
       - run: arduino-cli core install esp32:esp32
       - run: arduino-cli lib install "ArduinoJson" "ESPAsyncWebServer" "AsyncTCP"
-      - run: arduino-cli compile --fqbn esp32:esp32:esp32./Tambay-2.0-Vendo
+      - run: arduino-cli compile --fqbn esp32:esp32:esp32 ./Tambay-2.0-Vendo
       - run: |
           pip install esptool
           BOOT=$(find ~/.arduino15 -name bootloader_dio_40m.bin | head -n1)
